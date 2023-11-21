@@ -7,7 +7,7 @@ SRC_URI:append:kria = " git://github.com/Xilinx/u-boot-xlnx.git;protocol=https;b
 SRCREV_uboot = "${DT_UBOOT_SRCREV}"
 
 UBOOT_DTFILES_BUNDLE:kria ?= "1"
-UBOOT_DTFILE_PREFIX:kria = "SMK"
+UBOOT_DTFILE_PREFIX:kria ?= "SMK"
 
 do_configure:append:kria() {
     for dts in ${UBOOT_DT_FILES}; do
