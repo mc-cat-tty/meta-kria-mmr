@@ -3,7 +3,9 @@ LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
 
 REPO = "git://github.com/Xilinx/xmutil.git;protocol=https"
-SRCREV = "13b5dafec47f5e10dfb6106faec9a13f4914d270"
+SRCREV = "63fa179a7aa9dfe056dd0cb06af5d5a1e08c38d1"
+PV .= "+git${SRCPV}"
+
 BRANCH = "master"
 BRANCHARG = "${@['nobranch=1', 'branch=${BRANCH}'][d.getVar('BRANCH', True) != '']}"
 SRC_URI="${REPO};${BRANCHARG}"
