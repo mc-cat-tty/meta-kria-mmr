@@ -41,7 +41,8 @@ script_offset_f=3e80000
 script_size_f=0x80000
 scriptaddr=0x20000000
 usb_boot=usb start; if usb dev ${devnum}; then devtype=usb; run scan_dev_for_boot_part; fi
-preboot=setenv boot_targets; setenv modeboot; cls; run usb_init; run eth_init; usb start; run pm-cfg-snd
+tpm_setup=tpm startup TPM2_SU_CLEAR;
+preboot=setenv boot_targets; setenv modeboot; cls; run usb_init; run eth_init; usb start; run pm-cfg-snd; run tpm_setup;
 
 # SOM specific boot methods
 som_cc_boot=if test ${card1_name} = SCK-KV-G; then setenv boot_targets mmc1 usb0 usb1 usb2 usb3 pxe dhcp && run distro_bootcmd; elif test ${card1_name} = SCK-KR-G; then setenv boot_targets usb0 usb1 usb2 usb3 pxe dhcp && run distro_bootcmd; else test ${card1_name} = SCK-KD-G; setenv boot_targets usb0 usb1 usb2 usb3 pxe dhcp && run distro_bootcmd; fi;"
