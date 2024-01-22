@@ -4,7 +4,7 @@ LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=e02145ed27d5ba38507cf0f17e27adf0"
 
 BRANCH ?= "master"
 SRC_URI = "git://github.com/Xilinx/xlnx-board-id-data.git;protocol=https;branch=${BRANCH}"
-SRCREV ?= "1c332abc381e1c8188675229903c062c57e69488"
+SRCREV ?= "b2ae845b7b1b24f82a9410c2db5bc2eae5b4a545"
 
 S = "${WORKDIR}/git"
 
