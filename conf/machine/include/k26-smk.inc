@@ -5,10 +5,10 @@ MACHINEOVERRIDES =. "${@['', 'k26-smk:']['k26-smk' != '${MACHINE}']}"
 YAML_DT_BOARD_FLAGS ?= "{BOARD zynqmp-smk-k26-reva}"
 
 UBOOT_DT_FILES ?= "\
-    zynqmp-sck-kr-g-revA.dts \
-    zynqmp-sck-kr-g-revB.dts \
-    zynqmp-sck-kv-g-revA.dts \
-    zynqmp-sck-kv-g-revB.dts \
+    zynqmp-sck-kr-g-revA.dtso \
+    zynqmp-sck-kr-g-revB.dtso \
+    zynqmp-sck-kv-g-revA.dtso \
+    zynqmp-sck-kv-g-revB.dtso \
     "
 
 INITRAMFS_IMAGE ?= "kria-image-initramfs"
