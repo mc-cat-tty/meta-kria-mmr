@@ -4,7 +4,6 @@ KRIA_SRCURI ?= ""
 KRIA_SRCURI:kria ?= " \
 	file://vars \
 	file://kria_bootmenu.cfg \
-	file://kria.cfg \
 	"
 
 SRC_URI[vardepsexclude] = "KRIA_SRCURI"
