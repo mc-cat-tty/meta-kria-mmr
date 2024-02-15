@@ -12,8 +12,7 @@ PROVIDES = "virtual/dtb"
 
 inherit deploy
 
-PRECOMPILED_DTB_FILES_DIR ?= "/scratch/devicetree/"
-#PRECOMPILED_DTB_FILES_DIR ?= ""
+PRECOMPILED_DTB_FILES_DIR ?= ""
 
 do_install () {
     if [ -z "${PRECOMPILED_DTB_FILES_DIR}" ]; then
@@ -36,4 +35,3 @@ do_deploy () {
 addtask deploy before after do_install
 
 FILES:${PN} = "/boot/devicetree/*.dtb"
-
