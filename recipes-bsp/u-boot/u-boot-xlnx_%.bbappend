@@ -1,17 +1,5 @@
 FILESEXTRAPATHS:prepend := "${THISDIR}/files:"
 
-KRIA_SRCURI ?= ""
-KRIA_SRCURI:kria ?= " \
-	file://vars \
-	file://kria_bootmenu.cfg \
-	"
-
-SRC_URI[vardepsexclude] = "KRIA_SRCURI"
-SRC_URI .= "${KRIA_SRCURI}"
-
-do_configure:append:kria () {
-	install ${WORKDIR}/vars ${S}/.
-}
 
 UBOOT_MANIFEST = "${UBOOT_BINARYNAME}-${MACHINE}-${PV}-${PR}.manifest"
 
