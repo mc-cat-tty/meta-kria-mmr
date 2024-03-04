@@ -18,6 +18,8 @@ PACKAGE_INSTALL ?= " \
     e2fsprogs \
     mac-config \
     "
+PACKAGE_INSTALL:append:k26-kr = " kernel-modules load-module"
+PACKAGE_INSTALL:append:k24-kd = " kernel-modules load-module"
 
 # Do not pollute the initrd image with rootfs features
 IMAGE_FEATURES = ""
