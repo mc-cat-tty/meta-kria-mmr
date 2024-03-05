@@ -6,4 +6,3 @@ inherit update-alternatives
 FW_DIR = "k26_starter_kits"
 
 COMPATIBLE_MACHINE:k26-smk = "${MACHINE}"
-COMPATIBLE_MACHINE:kria-combined = "${MACHINE}"

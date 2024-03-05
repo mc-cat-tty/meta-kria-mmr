@@ -6,4 +6,3 @@ inherit update-alternatives
 FW_DIR = "k24_starter_kits"
 
 COMPATIBLE_MACHINE:k24-smk = "${MACHINE}"
-COMPATIBLE_MACHINE:kria-combined = "${MACHINE}"
