@@ -1,8 +1,0 @@
-[Unit]
-Description=load-module
-
-[Service]
-ExecStart=/usr/bin/load-module.sh
-
-[Install]
-WantedBy=multi-user.target
