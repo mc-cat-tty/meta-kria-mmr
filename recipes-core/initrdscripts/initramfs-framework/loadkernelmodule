@@ -1,0 +1,11 @@
+#!/bin/sh
+
+loadkernelmodule_enabled() {
+        return 0
+}
+
+loadkernelmodule_run() {
+	for MODULE in @@MODULE_NAMES@@ ;do
+		load_kernel_module $MODULE
+	done
+}
