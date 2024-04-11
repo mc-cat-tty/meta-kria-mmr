@@ -3,7 +3,7 @@ LICENSE = "MIT"
 LIC_FILES_CHKSUM = "file://MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
 
 REPO = "git://github.com/Xilinx/xmutil.git;protocol=https"
-SRCREV = "bd2af6a82e87e84c336bae0e96696258f0b3d008"
+SRCREV = "5dea5aa3ddfc66c555bf638ed27abd7abe236b7f"
 PV .= "+git${SRCPV}"
 
 BRANCH = "xlnx_rel_v2024.1"
