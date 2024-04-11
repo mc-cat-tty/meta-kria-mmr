@@ -6,7 +6,7 @@ REPO = "git://github.com/Xilinx/xmutil.git;protocol=https"
 SRCREV = "bd2af6a82e87e84c336bae0e96696258f0b3d008"
 PV .= "+git${SRCPV}"
 
-BRANCH = "master"
+BRANCH = "xlnx_rel_v2024.1"
 BRANCHARG = "${@['nobranch=1', 'branch=${BRANCH}'][d.getVar('BRANCH', True) != '']}"
 SRC_URI="${REPO};${BRANCHARG}"
 
