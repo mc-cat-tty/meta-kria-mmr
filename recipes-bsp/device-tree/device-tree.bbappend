@@ -2,7 +2,7 @@ FILESEXTRAPATHS:prepend:kria := "${THISDIR}/k26-som:"
 
 SRCREV_FORMAT:kria = "device-tree"
 DT_UBOOT_BRANCH ?= "xlnx_rebase_v2024.01"
-DT_UBOOT_SRCREV ?= "0c8d5190273263424cc60d416ce22e47f59bf1e6"
+DT_UBOOT_SRCREV ?= "8fc1a07a7c3e84fcd5bd945e1c931da25e1b0130"
 SRC_URI:append:kria = " git://github.com/Xilinx/u-boot-xlnx.git;protocol=https;branch=${DT_UBOOT_BRANCH};destsuffix=u-boot-xlnx;name=uboot"
 SRCREV_uboot = "${DT_UBOOT_SRCREV}"
 
