@@ -1,4 +1,6 @@
-# meta-kria
+# meta-kria-mmr
+
+Builds on top of meta-kria adding decrapified recipes and custom PL firmware.
 
 This layer enables AMD Xilinx Kria SOM boards, Evaluation Starter kits and
 provides related metadata.
