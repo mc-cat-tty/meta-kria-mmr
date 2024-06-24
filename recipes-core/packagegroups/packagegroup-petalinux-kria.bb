@@ -24,13 +24,17 @@ KRIA_PACKAGES = " \
         tree \
         tzdata \
         xmutil \
+        vim \
+        less \
+        tmux \
+        git \
         kria-dashboard \
         lmsensors-fancontrol \
         ${KRIA_ARCH_PACKAGES} \
 "
 
 KRIA_ARCH_PACKAGES = ""
-KRIA_ARCH_PACKAGES:k26-smk = "k26-starter-kits"
-KRIA_ARCH_PACKAGES:k24-smk = "k24-starter-kits"
+KRIA_ARCH_PACKAGES:k26-smk = "mmr-firmware"
+KRIA_ARCH_PACKAGES:k24-smk = "mmr-firmware"
 
 RDEPENDS:${PN} = "${KRIA_PACKAGES}"
