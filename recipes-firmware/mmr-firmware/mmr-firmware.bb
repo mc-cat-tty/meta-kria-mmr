@@ -28,7 +28,8 @@ COMPATIBLE_MACHINE ?= "^$"
 COMPATIBLE_MACHINE:k26-smk = "k26-smk"
 
 PLATFORM_NAME:task-generate-pl-artifacts = "kr260_custom_platform"
-XSCT_CMD:task-generate-pl-artifacts = "createdts -hw ${HDF_PATH} -git-branch xlnx_rel_v2022.2 -platform-name ${PLATFORM_NAME} -local-repo ${REPOS_PATH} -overlay -out ${TMPDIR}"
+PLATFORM_PATH:task-generate-pl-artifacts = "${WORKDIR}/platform/platform.xsa"
+XSCT_CMD:task-generate-pl-artifacts = "createdts -hw ${PLATFORM_PATH} -git-branch xlnx_rel_v2022.2 -platform-name ${PLATFORM_NAME} -local-repo ${REPOS_PATH} -overlay -out ${TMPDIR}"
 DTSI_OVERLAY:task-generate-pl-artifacts = "${TMPDIR}/${PLATFORM_NAME}/psu_cortexa53_0/device_tree_domain/bsp/pl.dtsi"
 BITSTREAM:task-generate-pl-artifacts = "${TMPDIR}/${PLATFORM_NAME}/hw/platform.bit"
 
@@ -36,6 +37,8 @@ _BIT_PATH = "${WORKDIR}/files/mmr-firmware.bit"
 _DTSI_PATH = "${WORKDIR}/files/mmr-firmware.dtsi"
 
 do_generate_pl_artifacts() {
+    mkdir -p ${WORKDIR}/platform
+    cp ${HDF_PATH} ${PLATFORM_PATH}
     ${XSCT_LOADER} -eval "${XSCT_CMD}"
     mkdir -p ${WORKDIR}/files
     cp ${BITSTREAM} ${_BIT_PATH}
