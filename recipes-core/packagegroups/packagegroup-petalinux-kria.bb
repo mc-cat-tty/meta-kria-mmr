@@ -10,7 +10,6 @@ KRIA_PACKAGES = " \
         packagegroup-core-full-cmdline \
         packagegroup-core-tools-debug \
         packagegroup-core-ssh-openssh \
-        packagegroup-petalinux-jupyter \
         packagegroup-petalinux-networking-stack \
         packagegroup-petalinux-python-modules \
         packagegroup-petalinux-tpm \
