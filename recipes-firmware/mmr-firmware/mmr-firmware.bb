@@ -38,10 +38,10 @@ _BIT_PATH = "${WORKDIR}/files/mmr-firmware.bit"
 _DTSI_PATH = "${WORKDIR}/files/mmr-firmware.dtsi"
 
 do_generate_pl_artifacts() {
-    mkdir -p ${WORKDIR}/platform
+    install -d ${WORKDIR}/platform
     cp ${HDF_PATH} ${PLATFORM_PATH}
     ${XSCT_LOADER} -eval "${XSCT_CMD}"
-    mkdir -p ${WORKDIR}/files
+    install -d ${WORKDIR}/files
     cp ${BITSTREAM} ${_BIT_PATH}
     cp ${DTSI_OVERLAY} ${_DTSI_PATH}
 }
