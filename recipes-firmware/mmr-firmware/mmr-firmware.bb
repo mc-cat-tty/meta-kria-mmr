@@ -17,7 +17,7 @@ python () {
 FILESEXTRAPATHS:append = "${WORKDIR}/files"
 
 inherit dfx_user_dts
-include default-firmware
+include default-firmware.inc
 
 SRC_URI = "\
     file://shell.json \
