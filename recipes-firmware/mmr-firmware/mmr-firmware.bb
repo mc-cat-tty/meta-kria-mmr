@@ -17,6 +17,7 @@ python () {
 FILESEXTRAPATHS:append = "${WORKDIR}/files"
 
 inherit dfx_user_dts
+inherit update-alternatives
 
 SRC_URI = "\
     file://shell.json \
@@ -52,5 +53,9 @@ do_install:append() {
 }
 
 FILES:${PN} += "${sysconfdir}"
+
+ALTERNATIVE:${PN} = "default_firmware"
+ALTERNATIVE_TARGET[default_firmware] = "${sysconfdir}/dfx-mgrd/${PN}"
+ALTERNATIVE_LINK_NAME[default_firmware] = "${sysconfdir}/dfx-mgrd/default_firmware"
 
 addtask do_generate_pl_artifacts before do_fetch
