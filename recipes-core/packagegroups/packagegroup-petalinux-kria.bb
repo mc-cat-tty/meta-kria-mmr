@@ -25,6 +25,8 @@ KRIA_PACKAGES = " \
         xmutil \
         vim \
         less \
+        spidev-test \
+        tmux \
         kria-dashboard \
         lmsensors-fancontrol \
         ${KRIA_ARCH_PACKAGES} \
