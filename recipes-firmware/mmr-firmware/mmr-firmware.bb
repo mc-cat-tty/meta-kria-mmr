@@ -48,3 +48,4 @@ do_generate_pl_artifacts() {
 }
 
 addtask do_generate_pl_artifacts before do_fetch
+do_generate_pl_artifacts[nostamp] = "1"
